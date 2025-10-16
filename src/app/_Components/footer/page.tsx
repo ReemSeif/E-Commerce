@@ -1,7 +1,7 @@
 'use client'
 
 import { useUser } from '@clerk/nextjs';
-import React, { use } from 'react'
+import React from 'react'
 
 function Footer() {
     const {user}=useUser();

@@ -1,6 +1,5 @@
 'use client'
 import { useCart } from '@/context/CartContext'
-import Link from 'next/link'
 import React, { useState } from 'react'
 type props= {
   id: number

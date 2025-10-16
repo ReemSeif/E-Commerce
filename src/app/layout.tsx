@@ -2,12 +2,7 @@ import Footer from "./_Components/footer/page";
 import NavBar from "./_Components/navBar/page";
 import "./globals.css";
 import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  ClerkProvider
 } from '@clerk/nextjs'
 
 import CartContext from '../context/CartContext';

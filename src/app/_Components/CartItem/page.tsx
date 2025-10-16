@@ -1,13 +1,20 @@
 import { getID } from '@/app/utils/getProducts';
 import { useCart } from '@/context/CartContext';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 interface CartItemProps {
   id: number;
  
 }
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  images: string[];
+}
  function Cartitem({ id }: CartItemProps) {
-const [product, setProduct] = useState<any>(null);
+const [product, setProduct] = useState<Product | null>(null);
 const {getItemsCount , addtoCart , decreaseCount , removeFromCart } = useCart();
 const quantity = getItemsCount(id);
 useEffect(() => {
@@ -21,14 +28,13 @@ useEffect(() => {
     <>
      <ul className="space-y-4">
           <li className="flex items-center gap-4">
-            <img
-              src={product?.images[0]}
+            <Image
+              src={product?.images?.[0] ?? "/placeholder.png"}
               alt=""
               className="size-16 rounded-sm object-cover"
             />
 
             <div>
-              <h3 className="text-sm text-gray-900">{}</h3>
 
               <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                 <div>

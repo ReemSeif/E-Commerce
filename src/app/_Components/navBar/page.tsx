@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 
 function NavBar() {
-  let path = usePathname();
+  const path = usePathname();
   const {user}=useUser();
   return (
     <>
@@ -36,19 +36,19 @@ function NavBar() {
            {!user ?
             <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <a
+              <Link
                 className="block rounded-md bg-purple-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-purple-600 dark:hover:bg-purple-600"
                 href="/sign-in"
               >
                 Login
-              </a>
+              </Link>
 
-              <a
+              <Link
                 className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-purple-400 transition hover:text-purple-500 sm:block dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
                 href="/sign-up"
               >
                 Register
-              </a>
+              </Link>
             </div>
             </div>
             :

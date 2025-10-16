@@ -1,6 +1,8 @@
-import CartBtn from '@/app/_Components/AddtoCart/page';
+import CartBtn from '@/app/_Components/AddtoCart/CartBtn';
 import { getID } from '@/app/utils/getProducts';
+import Image from 'next/image';
 import React from 'react'
+
 interface Props{
 params:Promise<{
   productID:string
@@ -14,7 +16,7 @@ async function ProductDetails({params} : Props) {
    
    <div className="p-6 mt-8 grid gap-4 sm:grid-cols-1 md:grid-cols-2 justify-items-center mx-auto max-w-6xl">
      <div>
-      <img
+      <Image
     src={data?.images[0]}
     alt=""
     className="h-[350px] border border-gray-200 rounded-md w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
