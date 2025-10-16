@@ -18,11 +18,16 @@ interface Product{
     <div className='p-6 mt-8 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
       {products.map((products:Product )=>(
         <div className='border border-gray-200' key={products.id}>
+        
         <Image
-      src={products?.images?.[0] || '/placeholder.jpg'}
+      src={products?.images[0] ?? '/placeholder.jpg'}
       alt=""
-      className="h-[200px] w-full object-cover transition duration-500 group-hover:scale-105 md:h-[350px]"
+      className=" w-full object-cover transition duration-500 group-hover:scale-105"
+      width={400}
+      height={400}
+      quality={100}
     />
+    
   
     <div className="bg-white p-6 ">
       <span className="bg-yellow-400 px-3 py-1.5 text-xs font-medium whitespace-nowrap"> New </span>

@@ -20,6 +20,9 @@ async function ProductDetails({params} : Props) {
     src={data?.images[0]}
     alt=""
     className="h-[350px] border border-gray-200 rounded-md w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+      width={400}
+      height={400}
+      quality={100}
   />
      </div>
       

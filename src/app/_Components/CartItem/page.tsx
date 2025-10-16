@@ -28,12 +28,16 @@ useEffect(() => {
     <>
      <ul className="space-y-4">
           <li className="flex items-center gap-4">
+            <div>
             <Image
-              src={product?.images?.[0] ?? "/placeholder.png"}
+              src={product?.images[0] ?? "/placeholder.png"}
               alt=""
-              className="size-16 rounded-sm object-cover"
+              className=" rounded-sm object-cover"
+              width={200}
+              height={200}
+              quality={100}
             />
-
+          </div>
             <div>
 
               <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
