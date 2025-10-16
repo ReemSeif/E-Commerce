@@ -10,8 +10,8 @@ function NavBar() {
   return (
     <>
     {
-      user &&(
-        <header className="bg-white dark:bg-gray-900">
+    
+        <header className="bg-white shadow-sm">
         <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
           <a className="block text-teal-600 dark:text-teal-300" href="#">
             <span className="sr-only">Home</span>
@@ -22,16 +22,11 @@ function NavBar() {
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <Link className={path === '/' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75'} href='/'>Home</Link>
+                  <Link className={path === '/' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 '} href='/'>Home</Link>
                 </li>
-
-                <li >
-                  <Link className={path === '/about' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75'} href='/about'>About</Link>
-
-                </li>
-                <li>   <Link className={path === '/products' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75'} href='/products'>Products</Link></li>
+                <li>   <Link className={path === '/products' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 '} href='/products'>Products</Link></li>
                 <li>
-                  <Link className={path === '/cart' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75'} href='/cart'>Cart</Link>
+                  <Link className={path === '/cart' ? 'active' : 'text-gray-500 transition hover:text-gray-500/75 '} href='/cart'>Cart</Link>
                 </li>
 
                 
@@ -43,14 +38,14 @@ function NavBar() {
             <div className="sm:flex sm:gap-4">
               <a
                 className="block rounded-md bg-purple-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-purple-600 dark:hover:bg-purple-600"
-                href="#"
+                href="/sign-in"
               >
                 Login
               </a>
 
               <a
                 className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-purple-400 transition hover:text-purple-500 sm:block dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
-                href="#"
+                href="/sign-up"
               >
                 Register
               </a>
@@ -70,7 +65,7 @@ function NavBar() {
           </div>
         </div>
       </header>
-      )
+     
     }
      
 
